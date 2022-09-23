@@ -41,4 +41,3 @@ Si encontramos dificultades a la hora de realizar algún paso debemos explicar e
 
 En esta parte debemos exponer las conclusiones que sacamos del desarrollo de la prácica.
 
-![image](img/html.png)
