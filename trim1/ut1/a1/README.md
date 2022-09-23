@@ -77,13 +77,28 @@ ln -s ../sites-available/your_name.me
 sudo rm default
 ```
 
-Ahora toca crear los archivos `index.html` y otros archivos si es necesario en mi caso yo cree un `style.css` y una carpeta con images:
+Ahora toca crear los archivos `index.html` y otros archivos si es necesario en mi caso yo cree un `style.css` y una carpeta con images todo eso dentro de `/var/www/html/series`:
+```
+cd /var/www/html/series
+```
 ```
 sudo nano index.html
 ```
 Estos son los ficheros que yo tengo:
 
 [mis-ficheros](https://github.com/MarcoJ18/IMW_Marco/tree/main/trim1/ut1/a1/document)
+
+Comprobamos si el fichero esta bien y reinciamos el servicio:
+```
+sudo nginx -t
+```
+```
+sudo systemctl reload nginx 
+```
+
+Resultado:
+
+![web-page](img/html.png)
 
 #### ***Conclusiones***. <a name="id5"></a>
 
