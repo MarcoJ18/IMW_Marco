@@ -20,7 +20,7 @@
 
 #### ***Introducción***. <a name="id1"></a>
 
-Lo que realizaremos en esta práctica será descargar **nginx** y configurar lo para que al abrirse una página del navegador y acceder 'http://marco.me/serires/'. Dentro de dicha página se encontrará la portada de nuestras series favoritas que al clic-ar sobre esa imagen nos redirigirá a la página de [IMDB](https://www.imdb.com/).
+Lo que realizaremos en esta práctica será descargar **nginx** y configurar lo para que al abrirse una página del navegador y acceder `http://marco.me/serires/`. Dentro de dicha página se encontrará la portada de nuestras series favoritas que al clic-ar sobre esa imagen nos redirigirá a la página de [IMDB](https://www.imdb.com/).
 
 #### ***Objetivos***. <a name="id2"></a>
 
