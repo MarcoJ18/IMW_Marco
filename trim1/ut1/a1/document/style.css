@@ -1,0 +1,70 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+body{
+   
+    background: url(https://i.gifer.com/36yY.gif);
+    background-size: cover;
+    
+    
+}
+
+
+
+header{
+    color: #e50914;
+    position: absolute;
+    font-size: xx-large;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-gap: 50px;
+    margin: 15vh 0 12vh 0;
+    justify-content: center;
+    
+}
+
+
+
+main a{
+    margin: 0 50px;
+}
+
+img{
+    max-width:100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    
+    opacity: 1;
+}
+
+@media screen and (min-width: 1200px) and (orientation: landscape) {
+    img{
+        opacity: .7;
+    }
+    img:hover{
+        box-shadow: 0px 0px 20px rgb(255, 255, 255);
+        opacity: 1;
+     
+     }
+}
+
+
