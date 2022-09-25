@@ -1,6 +1,6 @@
 <center>
 
-# TÍTULO DE LA PRÁCTICA
+# UT1-A2: Listado de directorios
 
 
 </center>
