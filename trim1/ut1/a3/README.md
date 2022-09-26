@@ -352,6 +352,8 @@ ln -s ../sites-available/target.marco.me
 
 Luego nos descargamos el archivo **initializr-verekia-4.0.zip**. Y lo colocamos en nuestro sitio web.
 
+[Archivo](file/initializr-verekia-4.0.zip)
+
 Pasamos el archivo a la máquina virtual
 
 ```
