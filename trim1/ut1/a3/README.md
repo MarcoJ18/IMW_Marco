@@ -52,7 +52,7 @@ Teniendo en cuenta que ya estamos conectados por `ssh` a la máquina virtual y t
 
 <hr>
 
-### *Host1* <a name="#h1"></a>
+### *Host1* <a name="h1"></a>
 
 Creamos el host virtual:
 ```
@@ -158,7 +158,7 @@ El archivo debe ser parecido a esto:
 ```
 
 Comprobamos y reiniciamos:
-<a name="#reinciar"></a>
+<a name="reinciar"></a>
 ```
 sudo nginx -t
 ```
@@ -174,7 +174,7 @@ Como podemos ver no hemos usado en ningún momento el `location` ni hemos entrad
 
 <hr>
 
-### *Host2* <a name="#h2"></a>
+### *Host2* <a name="h2"></a>
 
 Vamos a repetir los mismos pasos que antes para crear nuestro host virtual, está sería la configuración de este en particular:
 
@@ -225,7 +225,7 @@ Resultado:
 
 <hr>
 
-### *Host3* <a name="#h3"></a>
+### *Host3* <a name="h3"></a>
 
 ```
 sudo nano /etc/nginx/sites-available/ssl.marco.me
@@ -302,7 +302,7 @@ Resultado:
 
 <hr>
 
-### *Host4* <a name="#h4"></a>
+### *Host4* <a name="h4"></a>
 
 En este caso yo resolví este problema creando dos hosts virtuales, uno llamado `redirect.marco.me` y otro `target.marco.me`.
 
@@ -408,13 +408,13 @@ server {
 
 Resultado:
 
-[video](video/video.mkv)
-
 ![resultado](img/redirect-resultado.png)
 
 ![log1](img/redirect-log1.png)
 
 ![log2](img/redirect-log2.png)
+
+[video](video/video.mkv)
 
 
 #### ***Conclusiones***. <a name="id5"></a>
