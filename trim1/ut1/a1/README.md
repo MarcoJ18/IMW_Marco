@@ -30,6 +30,11 @@ Los objetivos de esta práctica era realizar una configuración básica de nginx
 
 Usamos una máquina virtual de Ubuntu 18.04 en adaptador puente con ip estática con esta ip `172.19.99.112` y una máquina Kali para configurar los DNS (se puede realizar con cualquier otra máquina, pero en mi caso, use esa porque era la que tenía), también en adaptador puente.
 
+Los hosts están configurados de esta forma:
+```
+172.19.99.112          marco.me
+```
+
 #### ***Desarrollo***. <a name="id4"></a>
 
 Primero nos conectamos por SSH a la máquina remota:
