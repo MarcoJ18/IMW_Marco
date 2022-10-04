@@ -187,7 +187,7 @@ server {
         listen 9000; # Escucha por el puerto 9000
 
         server_name varlib.marco.me;
-        root /var/www/html/varlib/;
+        root /var/lib; #Ponemos la ruta de la carpeta que queremos 
         autoindex on;
 
 }
@@ -202,24 +202,11 @@ cd /etc/nginx/sites-enabled
 ln -s ../sites-available/varlib.marco.me 
 ```
 
-
-Luego creamos un enlace simbólico dentro de la carpeta `/var/www/html/varlib`:
-
-```
-mkdir -p /var/www/html/varlib
-```
-```
-cd /var/www/html/varlib
-```
-```
-ln -s /var/lib
-```
-
 **[REINICIAMOS](#reinciar)**
 
 Resultado:
 
-![resultado](img/varlib-resultado1.png)
+![resultado](img/fix-sitie-2.png)
 
 **Si tenemos cortafuegos, darle permisos para qué pueda actuar por el puerto 9000 si no funcionara**(En mi caso yo lo tenía desactivado).
 
