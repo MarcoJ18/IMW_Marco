@@ -232,6 +232,12 @@ server {
                 auth_basic_user_file /var/www/html/students/.htpasswd; # Archivo donde se encuentra el nombre y la contraseña para poder logearte
 
         }
+        location ~/.htpasswd { #Esto sirve para denegar que podamos descargar el archivo de htpasswd. El ~ es cualquier cosa que le pasemos.
+
+                deny all;  #Deniega todo
+                return 301; #Nos devuele un error 301
+
+        }
 
 
 }
@@ -286,6 +292,8 @@ Resultado:
 ![resultado1](img/ssl-resultado1.png)
 
 ![resultado2](img/ssl-resultado2.png)
+
+![resultado3](img/ssl-resultado3.png)
 
 <hr>
 

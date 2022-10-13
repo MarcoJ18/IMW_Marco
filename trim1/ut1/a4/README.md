@@ -293,9 +293,78 @@ RUN mkdir -p /var/log/nginx/redirect/
 ```
 
 - La primera instrucción significa que cogemos la imagen de Nginx
-- La segunda instrucción es la copia de fichero de la maquina nuestra a la de docker 
+- La segunda instrucción es la copia de fichero de la maquina nuestra a la de docker.En docker el fichero de configuración se encuentra en `/etc/nginx/conf.d/`.
+- La tercera instrucción es la copia de fichero de la maquina nuestra a la de docker.En docker la carpeta donde se encuntra las webs es en `/usr/share/nginx/html`
+- La cuarta instrucción la usamos para crear la carpeta de logs de un ejercicio de clase.Ya que si no creamos nos dara un error.
+
+
+Creamos la imagen:
+
+```
+docker build -t marcoj18/nginx-class:v1 .
+```
+
+Le puse ese nombre ya que lo voy subir docker hub y para ello se necesita poner el `nombre de usuario` , el `nombre de la imagen`y el `tag`.
+
+
+**Antes de arrancar la imagen debemos para el servicio de nginx para que no haya conflictos**
+
+```
+sudo systemctl stop nginx
+```
+```
+sudo systemctl disable nginx
+```
+
+Ahora para arrancar la imagen usamos el siguiente comando:
+
+```
+docker run -it -d -p 80:80 -p 9000:9000 --name myweb marcoj18/nginx-class:v1
+```
+
+Comprobaciones:
+
+![docker](img/docker1.png)
+
+![docker](img/docker3.png)
+
+![docker](img/docker4.png)
+
+![docker](img/docker5.png)
+
+![docker](img/docker6.png)
+
+![docker](img/docker7.png)
+
+![docker](img/docker8.png)
+
+![docker](img/docker9.png)
+
+![docker](img/docker10.png)
+
+![docker](img/docker11.png)
+
+![docker](img/docker12.png)
+
+
+
+
+
+**Para logearte en docker usamos el siguiente comando:**
+
+```
+docker login
+```
+
+**Luego para subir la imagen a docker hub usamos el siguiente comando:**
+
+```
+docker push marcoj18/nginx-class:v1
+```
+
+
+
 
 #### ***Conclusiones***. <a name="id5"></a>
 
-En esta parte debemos exponer las conclusiones que sacamos del desarrollo de la prácica.
-
+Como conclusión quiero comentar que fue un poco complicado realizar una migración ya que había muchas forma de realizarlo intente realizarlo de forma más optima y más sencilla posible ya que hay otras muchas mejores pero parecian más complejas de realizar. Por ejemplo usando docker-compose que es una forma de usar docker pero más facil ya que lo que hace es reducir los comando que usa docker por defecto y más.Pero como no soy un experto en docker use un fichero dockerfile para crealo aunque se pueda realizar con docker-compose ya que ahi se puede crear directamente tus host-virutales y todo de una forma más facil.Pero bueno al final la practica ha sido compleja al principo pero una vez lo comprendes como usar docker y donde se encuntrar los ficheros de nginx se vuelve más sencillo.
