@@ -277,7 +277,7 @@ Ahora creamos el fichero Dockerfile para poder luego crear una imagen con nuestr
 ```
 cd ..
 ```
-s
+
 ```
 sudo nano Dockerfile
 ```
