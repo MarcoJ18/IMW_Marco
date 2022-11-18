@@ -9,13 +9,14 @@
     justify-content: center;
     align-items: center;
 
-
+    background: url(img/img.avif) no-repeat center center fixed;
+    background-size: cover;
 
 }
 
 
 .subcontainer{
-
+    background: #fff;
     border: 5px dashed#000;
     text-align:center;
     padding: 5%;
