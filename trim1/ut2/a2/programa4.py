@@ -1,5 +1,7 @@
 import sys
 import math
+import colorama
+from colorama import Fore
 
 def diametro(r):
     return f'Diámetro: {int(2*r)}'
@@ -17,30 +19,32 @@ try:
 
     opcion = 0
     
-    print("(1) Calcular el diámetro de la circunferencia:")
-    print("(2) Calcular el perímetro de la circunferencia:")
-    print("(3) Calcular el área del círculo:")
-    print("(4) Salir")
+
 
     while True:
 
+        print(Fore.WHITE + "(1) Calcular el diámetro de la circunferencia:")
+        print("(2) Calcular el perímetro de la circunferencia:")
+        print("(3) Calcular el área del círculo:")
+        print("(4) Salir")
+
         opcion = int(input("Elige la opcion: "))
         if opcion == 1:
-            print(diametro(radio))
-            break
+            print(Fore.RED + diametro(radio))
+            continue
         elif opcion == 2:
-            print(circurferecia(radio))
-            break
+            print(Fore.RED + circurferecia(radio))
+            continue
         elif opcion == 3:
-            print(circulo(radio))
-            break
+            print(Fore.RED + circulo(radio))
+            continue
         elif opcion == 4:
-            print('Salir...')
+            print(Fore.RED + 'Saliendo...')
             break
         else:
-            print("Error: Unknown opcion")
+            print(Fore.RED + "Error: Unknown opcion")
 
 except:
-    print("No has puesto ningun argumento o no es valida la opcion")
+    print(Fore.RED + "No has puesto ningun argumento o no es valida la opcion")
 
 
