@@ -1,0 +1,34 @@
+server {
+
+	server_name target.alu7604.arkania.es;
+	root /var/www/html/redirect/initializr;
+
+	access_log /var/log/nginx/redirect/access.log;
+	error_log /var/log/nginx/redirect/error.log;
+
+
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/alu7604.arkania.es/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/alu7604.arkania.es/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+
+
+
+}
+server {
+    if ($host = target.alu7604.arkania.es) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+
+	server_name target.alu7604.arkania.es;
+    listen 80;
+    return 404; # managed by Certbot
+
+
+}

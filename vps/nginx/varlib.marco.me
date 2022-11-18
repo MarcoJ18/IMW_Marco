@@ -1,0 +1,29 @@
+server {
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/alu7604.arkania.es/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/alu7604.arkania.es/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+    return 301 $scheme://varlib.alu7604.arkania.es:9000$request_uri;
+
+}
+
+server{
+
+        listen 9000 ssl;
+
+        server_name varlib.alu7604.arkania.es;
+    ssl_certificate /etc/letsencrypt/live/alu7604.arkania.es/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/alu7604.arkania.es/privkey.pem; # managed by Certbot
+        root /var/lib;
+        autoindex on;
+
+
+
+
+
+
+
+
+}
