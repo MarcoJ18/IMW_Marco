@@ -14,6 +14,6 @@ try:
     if input < 0:
         print("Es un número negativo")
     else:
-        print(sumaCuadrados(input));
+        print(sumaCuadrados(input))
 except:
     print("No es un número")

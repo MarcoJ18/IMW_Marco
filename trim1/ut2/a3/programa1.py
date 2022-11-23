@@ -15,6 +15,6 @@ try:
     if input < 0:
         print("Es un número negativo")
     else:
-        print(primo(input));
+        print(primo(input))
 except:
     print("No es un número")
