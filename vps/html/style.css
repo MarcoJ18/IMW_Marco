@@ -28,12 +28,12 @@
 
 
 
-.container h1 {
+.subcontainer h1 {
     font-size: 3rem;
     margin: 2rem;
 }
 
-.container h1 a{
+.subcontainer h1 a{
     text-decoration: none;
     color: #000;
 }
@@ -42,18 +42,18 @@ hr{
     border: 1px solid #000;
 }
 
-.container ul {
+.subcontainer ul {
     list-style-type: none;
 }
 
 
 
-.container ul li {
+.subcontainer ul li {
     margin-top: 1rem;
 
 }
 
-.container ul a {
+.subcontainer ul a {
     text-decoration: none;
     color: #000;
     font-size: 2em;
@@ -62,11 +62,19 @@ hr{
 }
 
 
+.github img{
+    margin-top: 50px;
+    width: 200px;
+    border: 3px dashed #32f;
+    border-radius: 50px;
+}
+
+
 
 
 @media screen and (min-width: 1200px) {
 
-    .container ul a:hover{
+    .subcontainer ul a:hover{
         text-decoration: none;
         background: #000;
         color: #fff;
@@ -74,22 +82,47 @@ hr{
         transition: all .3s ease-in-out;
     }
 
-    hr{
-        height: 18rem;
-        margin-right: 3rem;
-    }
-
     .subcontainer{
-        padding: 5%;
-        display: flex;
-        justify-content: center;
+        padding: 3%;
+        display: grid;
+        grid-template-areas: 'head head head'
+                             'github github github';
         align-items: center;
         text-align: justify;
     }
 
+
+    .subcontainer hr{
+        height: 25rem;
+        margin-right: 3rem;
+    }
+
+
+
     .subcontainer:hover{
-        padding: 6%;
+        padding: 4%;
         transition: padding .5s ease-out;
     }
+
+    .github {
+        grid-area: github;
+        margin: auto;
+    }
+
+    .github img{
+        transition: all ease-out .3s;
+    }
+
+    .github img:hover{
+        background: #fff;
+        filter: invert(100%);
+        border: 3px solid #fff;
+        transition: all ease-in .3s;
+
+
+    }
+
+
+
 
 }
