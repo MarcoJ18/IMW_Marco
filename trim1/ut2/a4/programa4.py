@@ -1,23 +1,15 @@
 import sys
 
-def media(n):
-    resultado = 0
 
-    for i in range(1,n+1):
-        num = float(sys.argv [i])
-        resultado += num
+n = sys.argv[1:]
+max = len(n)
+resultado = 0
 
-    media = resultado / n
 
-    return f'La media de los valores es: {media}'
+for i in n:
+    resultado += float(i)
 
-try:
-    n = len(sys.argv[1:])
 
-    if n < 0:
-        print('Es un número negativo')
-    else:
-        print(media(n))    
-except:
-    print('Número no valido')
+media  = resultado / max
+print(media)
 
