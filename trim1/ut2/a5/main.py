@@ -83,9 +83,13 @@ def upper_vowels(text):
     allWords = ''
     for i in text:
         for j in volwerls:
-            allWords += i
             if i == j:
                 allWords += i.upper()
+            else:
+                allWords += i
+            
+            
+
                 
     return allWords
 
