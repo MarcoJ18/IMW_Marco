@@ -78,30 +78,36 @@ def halfs(text):
     return f'{text[:half]} | {text[half:]}'
 
 
+# Función que hace que las vocales sean mayusculas
+# Lo que hacemos es re correr el texto y vemos si una de las vocales es minuscula
+# Si lo es lo convertimos a mayusculas
+# Mejorable: No puede usar un bucle para encontrar las vocales ya que se repetia el doble de palabras al intenar añadirla en allWords
+
+
 def upper_vowels(text):
     volwerls = 'aeiou'
     allWords = ''
     for i in text:
-        for j in volwerls:
-            if i == j:
-                allWords += i.upper()
-            else:
-                allWords += i
-            
-            
-
-                
+        if i == volwerls[0] or i == volwerls[1] or i == volwerls[2] or i == volwerls[3] or i == volwerls[4]:
+            allWords += i.upper()
+        else:
+            allWords += i
+                      
     return allWords
 
 
+# Función que recorrer el texto y lo ordena por palabras
+# Lo que hacemos es separar por palabras y convertilo en un array para luegar usar la función sorted que hace que ordene didchas palabras
+#Luego creamos una cadena vacia. Para añadir cada palabra del array en una cadena y asi tenerlo más bonito y ordenado
+
 def sorted_by_words(text):
     lista = text.split(' ')
-    num = []
-    for i in lista:
-        num.append(len(i))
-        
-        
-    return 
+    ordenar = sorted(text)
+    toString = ''
+    for i in ordenar:
+        toString += ' ' + i    
+
+    return ordenar
 
 
 # Función que recorre el texto para sabar la longitud de cada palabra
