@@ -102,12 +102,12 @@ def upper_vowels(text):
 
 def sorted_by_words(text):
     lista = text.split(' ')
-    ordenar = sorted(text)
+    ordenar = sorted(lista)
     toString = ''
     for i in ordenar:
         toString += ' ' + i    
 
-    return ordenar
+    return toString
 
 
 # Función que recorre el texto para sabar la longitud de cada palabra
