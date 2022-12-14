@@ -2,12 +2,14 @@ import sys
 
 def count_words(sentence):
     summary = {}
-    str_list = sentence.split()
-    unique_words = set(str_list)
-    print(str_list)
-    print(unique_words)
-    for words in unique_words:
-        print(words,str_list.count(words))
+    lista = sentence.split()
+    noRepeat = set(lista)
+    for i in noRepeat:
+        summary[i] = lista.count(i)
+ 
+
+    
+    return summary
         
 
 
