@@ -10,9 +10,8 @@ def num_vowels(text):
     volwerls = 'aAeEiIoOuU' 
     counter = 0
     for i in text:
-        for j in volwerls:
-            if i == j:
-                counter += 1
+        if i in volwerls:
+            counter += 1
             
     return counter
 
@@ -81,17 +80,15 @@ def halfs(text):
 # Función que hace que las vocales sean mayusculas
 # Lo que hacemos es re correr el texto y vemos si una de las vocales es minuscula
 # Si lo es lo convertimos a mayusculas
-# Mejorable: No puede usar un bucle para encontrar las vocales ya que se repetia el doble de palabras al intenar añadirla en allWords
-
 
 def upper_vowels(text):
     volwerls = 'aeiou'
     allWords = ''
-    for i in text:
-        if i == volwerls[0] or i == volwerls[1] or i == volwerls[2] or i == volwerls[3] or i == volwerls[4]:
+    for i in text.lower():
+        if i in volwerls:
             allWords += i.upper()
         else:
-            allWords += i
+            allWords += i 
                       
     return allWords
 
