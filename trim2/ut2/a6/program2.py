@@ -52,10 +52,10 @@ def menu():
         print('2.Añadir contacto (nombre y teléfono).')
         print('3.Borrar contacto (nombre).')
         print('4.Salir.')
-        option = input('Elige un número: ')
-        if option == '1':
+        option = int(input('Elige un número: '))
+        if option == 1:
             print(show_contacts(phone_book))
-        elif option == '2':
+        elif option == 2:
             name = input('Dame un nombre: ')
             # Esto lo añadimos aqui ya que queria preguntar primero si el nombre exite en vez de tener que preguntar por el nombre y telefono
             if name in phone_book:
@@ -63,10 +63,10 @@ def menu():
             else:
                 phone = int(input('Dame un número de telefono: '))
                 print(add_contact(phone_book,name,phone))
-        elif option == '3':
+        elif option == 3:
             name = input('Dame un nombre: ')
             print(remove_contact(phone_book,name))
-        elif option == '4':
+        elif option == 4:
             break
         else:
             print("Unknown option")
