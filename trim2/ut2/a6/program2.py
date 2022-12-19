@@ -18,7 +18,9 @@ def add_contact(phone_book,name,phone):
 
 def remove_contact(phone_book,name):
     if not phone_book.get(name):
-        print('No exite')
+        return 'Error - Nombre no exite'
+    else:
+        del phone_book[name]
 
 
 
@@ -39,11 +41,11 @@ def menu():
     elif option == 2:
         name = input('Dame un nombre: ')
         phone = int(input('Dame un número de telefono: '))
-        print(add_contact(phone_book,name,phone))
+        add_contact(phone_book,name,phone)
     
     elif option == 3:
         name = input('Dame un nombre: ')
-        print(remove_contact(phone_book,name))
+        remove_contact(phone_book,name)
 
 
 menu()
