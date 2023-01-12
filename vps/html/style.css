@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .container{
@@ -8,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: url(img/img.avif) no-repeat center center fixed;
     background-size: cover;
 
@@ -19,7 +19,7 @@
     background: #fff;
     border: 5px dashed#000;
     text-align:center;
-    padding: 5%;
+    padding: 0% 5%;
     transition: padding .5s ease-out;
 }
 
