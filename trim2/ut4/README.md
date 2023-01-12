@@ -135,7 +135,7 @@ sudo nano wp-config.php
 
 Lo dejamos igual que esto pero con tus propios datos:
 
-```bash
+```php
 ...
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
